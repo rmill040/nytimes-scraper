@@ -3,7 +3,7 @@ javascript: (function () {
     // Get parameters from URL
     let urlString    = document.URL;
     let url          = new URL(urlString);
-    const query      = url.searchParams.get("query");
+    const query      = url.searchParams.get("query").replace(" ", "_");
     const start_date = url.searchParams.get("startDate");
     const end_date   = url.searchParams.get("endDate");
 
